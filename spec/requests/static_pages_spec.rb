@@ -40,4 +40,17 @@ describe "Static Pages" do
       expect(page).to have_title("Kitfinity | About")
     end
   end
+
+  describe "Contact Page" do
+
+    it "should have the content 'Contact' " do
+      visit '/static_pages/contact'
+      expect(page).to have_content('Contact')
+    end
+
+    it "Should have the title 'Contact' " do
+      visit '/static_pages/contact'
+      expect(page).to have_title("Kitfinity | Contact")
+    end
+  end
 end
